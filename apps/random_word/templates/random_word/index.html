@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Random word generator</title>
+</head>
+<body>
+	<h1>Random</h1>
+	<br>
+	
+	<p>Random Word (attempt #{{request.session.times}})</p>
+
+	<form action="/generate" method="post">
+		{% csrf_token %}
+		<input type="submit" value="generate">
+	</form>
+	<br>
+	<h3>{{request.session.word}}</h3>
+
+
+</body>
+</html>
